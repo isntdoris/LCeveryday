@@ -17,8 +17,9 @@ class Solution:
                 total += int(b[j])
                 j -= 1
 
-            result.append(str(total %2))
-            carry = total // 2
+            result.append(str(total %2)) # using the remainder technique
+            
+            carry = total // 2 # dividing the sum by 2 to get the carry-over value
 
         return ''.join(reversed(result))
         
