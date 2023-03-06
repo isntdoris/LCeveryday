@@ -15,6 +15,8 @@
 #     6.3 increment the steps variable
 # 7. if the last index of the array is not reached, return -1
 
+from collections import defaultdict, deque
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         n = len(arr)
