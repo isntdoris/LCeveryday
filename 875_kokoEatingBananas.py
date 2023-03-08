@@ -8,7 +8,7 @@ class Solution:
         def can_eat_all_bananas(speed): # speed form mid pointer
             time = 0
             for pile in piles:
-                time += (pile + speed - 1) // speed # interesting concept
+                time += (pile + speed - 1) // speed # to determine how much time to put into "time" because if pile is less than k, it still takes 1 hour that's why we are adding numerator k here
             return time <= h
 
         # Binary search for the minimum speed
