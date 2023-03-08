@@ -5,7 +5,7 @@ class Solution:
         right = max(piles)
 
         # Define a function to check if it's possible to eat all bananas in h hours
-        def can_eat_all_bananas(speed): # speed form mid pointer
+        def can_eat_all_bananas(speed): # speed from mid pointer
             time = 0
             for pile in piles:
                 time += (pile + speed - 1) // speed # to determine how much time to put into "time" because if pile is less than k, it still takes 1 hour that's why we are adding numerator k here
