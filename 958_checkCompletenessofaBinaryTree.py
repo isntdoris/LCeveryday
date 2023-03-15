@@ -4,6 +4,13 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# Approach : Breadth First Search
+# Traverse the tree in level-order using a queue. At each level, we add the left and right child nodes of each node to the queue.
+# If we encounter a null node, we still add it to the queue so that we can check if there are any more nodes left in the next step.
+# Once we have traversed the entire tree, we check if there are any remaining nodes in the queue.
+# If there are, it means the tree is not complete, and we return false.
+# Otherwise, the tree is complete, and we return true.
         
 from collections import deque
 
