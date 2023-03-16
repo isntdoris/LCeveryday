@@ -21,8 +21,8 @@ class Solution:
             val = postorder.pop()
             root = TreeNode(val)
 
-            # root splits inorder list
-            # into left and right subtrees
+            # root splits inorder list into left and right subtrees
+            # hmmm why is this splitting the inorder list?
             index = idx_map[val]
 
             # use helper to call helper, thus create recursion
