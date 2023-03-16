@@ -9,6 +9,7 @@
 #       - Return root.
 
 # I don't understand why in_left > in_right, the subtree is empty, return None.
+# for next time review, try to figure out the logic of return root
 
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
