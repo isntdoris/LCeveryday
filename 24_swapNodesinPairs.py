@@ -5,13 +5,23 @@
 #         self.next = next
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        if not head: return head
-        prev, cur, ans = None, head, head.next
+        dummy = ListNode(0, head)
+        prev, curr = dummy, head
 
-        while cur and cur.next:
-            adj = cur.next
-            if prev: prev.next = adj
-            cur.next, adj.next = adj.next, cur
-            prev, cur = cur, cur.next
+        # prev, curr, second, nxtPair, curr.next, curr.next.next (6 variables)
+
+        while curr and curr.next:
+            # save pointers
+            nxtPair = curr.next.next
+            second = curr.next
+
+            # reverse this pair
+            curr.next = nxtPair
+            second.next = curr
+            prev.next = second
+
+            # update pointers
+            prev = curr
+            curr = nxtPair
         
-        return ans or head
+        return dummy.next
