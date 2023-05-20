@@ -18,7 +18,7 @@ class Solution:
             # reverse this pair
             curr.next = nxtPair
             second.next = curr
-            prev.next = second
+            prev.next = second # second node is being put into the first position
 
             # update pointers
             prev = curr
