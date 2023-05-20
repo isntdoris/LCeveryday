@@ -10,7 +10,7 @@ class Solution:
 
         # prev, curr, second, nxtPair, curr.next, curr.next.next (6 variables)
 
-        while curr and curr.next:
+        while curr and curr.next: # make sure curr and curr.next not the end of the list
             # save pointers
             nxtPair = curr.next.next
             second = curr.next
