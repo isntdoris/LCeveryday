@@ -10,7 +10,7 @@ class Solution:
 
         while curr:
             nxt = curr.next
-            curr.next = prev
+            curr.next = prev # 不理解這個步驟
             prev = curr
             curr = nxt
         return prev
