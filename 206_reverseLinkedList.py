@@ -10,7 +10,7 @@ class Solution:
 
         while curr:
             nxt = curr.next
-            curr.next = prev # 不理解這個步驟
-            prev = curr
-            curr = nxt
+            curr.next = prev # 改變pointer的方向
+            prev = curr # 交換位置
+            curr = nxt # 交換位置
         return prev
