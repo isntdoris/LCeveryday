@@ -1,5 +1,23 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        # 方法一（可以理解！
+        l, r = 1, max(piles)
+        res = r
+
+        while l <= r:
+            k = (l+r) // 2
+            hours = 0
+            for p in piles:
+                hours += math.ceil(p/k)
+            
+            if hours <= h:
+                res = min(res, k)
+                r = k - 1
+            else:
+                l = k + 1
+        return res
+
+        # 方法二（曾經可以理解
         # Define the search space
         left = 1
         right = max(piles)
@@ -19,4 +37,4 @@ class Solution:
             else:
                 left = mid + 1
 
-        return left
+        return left # 不懂為什麼return left
