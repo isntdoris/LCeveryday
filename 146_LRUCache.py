@@ -3,6 +3,9 @@ class Node:
         self.key, self.val = key, val
         self.prev = self.next = None
 
+        # not working if initialize here, but why?
+        self.left, self.right = Node(0, 0), Node(0, 0)
+        self.left.next, self.right.prev = self.right, self.left
 
 class LRUCache:
     def __init__(self, capacity: int):
@@ -27,7 +30,7 @@ class LRUCache:
         if key in self.cache:
             self.remove(self.cache[key])
             self.insert(self.cache[key])
-            return self.cache[key].val
+            return self.cache[key].val # 注意是要有.val回傳值 self.cache[key].val
         return -1
 
     def put(self, key: int, value: int) -> None:
