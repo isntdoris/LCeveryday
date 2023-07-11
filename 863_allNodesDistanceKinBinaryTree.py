@@ -7,7 +7,8 @@
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        if not k:
+
+        if k == 0:
             return [target.val]
         
         graph = collections.defaultdict(list)
