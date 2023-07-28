@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-with cte as (
+WITH cte AS (
     SELECT num,
     lead(num,1) over() num1,
     lead(num,2) over() num2
