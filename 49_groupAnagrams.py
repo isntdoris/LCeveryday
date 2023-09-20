@@ -7,6 +7,6 @@ class Solution:
             for c in s:
                 count[ord(c) - ord("a")] += 1
         
-            res[tuple(count)].append(s)
+            res[tuple(count)].append(s) # list can not be keys, change it to tuple
 
         return res.values()
