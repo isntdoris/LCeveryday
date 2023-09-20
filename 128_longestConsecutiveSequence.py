@@ -7,7 +7,7 @@ class Solution:
         for n in nums:
             if (n - 1) not in numSet:
                 length = 0
-                while (n + length) in numSet:
+                while (n + length) in numSet: # (n + length) is clever
                     length += 1
                 res = max(res, length)
         return res
