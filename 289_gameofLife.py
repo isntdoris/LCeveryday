@@ -3,6 +3,12 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
+        # original | new | state
+        #    0        0      0
+        #    1        0      1
+        #    0        1      2
+        #    1        1      3
+
         ROWS = len(board)
         COLS = len(board[0])
 
