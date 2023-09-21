@@ -32,10 +32,10 @@ class Solution:
         for r in range(ROWS):
             for c in range(COLS):
                 nei = countNeighbors(r, c)
-                if board[r][c]:
+                if board[r][c]: # check original == 1 and nei in [2,3]
                     if nei in [2, 3]:
                         board[r][c] = 3
-                elif nei == 3:
+                elif nei == 3: # check original == 0 and nei == 3
                     board[r][c] = 2
         # print(board)
 
