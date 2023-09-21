@@ -22,7 +22,7 @@ class Solution:
                     # print(i, j)
                     # print('zzz')
                     # print(board[i][j])
-                    if board[i][j] in [1, 3]: # why? not mixing with next operations?
+                    if board[i][j] in [1, 3]: # 為什麼可以提前判斷3的情境。。。想不通
                         # print(board[i][j])
                     # if board[i][j] == 1:
                         nei += 1
