@@ -1,5 +1,6 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        # https://www.youtube.com/watch?v=Ber2pi2C0j0
         ROWS, COLS = len(matrix), len(matrix[0])
 
         top, bot = 0, ROWS-1
@@ -12,6 +13,7 @@ class Solution:
                 row = row - 1
             else:
                 break
+        # here
         if not (top <= bot):
             return False
         
