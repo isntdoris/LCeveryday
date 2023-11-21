@@ -17,6 +17,7 @@ class Solution:
         ans = 0
         MOD = 10 ** 9 + 7
         for num in arr:
+            # Each num we had already seen earlier can be paired with the current num to form a pair.
             ans = (ans + hashMap[num]) % MOD
             hashMap[num] += 1
         return ans
