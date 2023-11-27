@@ -2,6 +2,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         @cache
         def dp(remain, cell):
+            # RICKY HERE
             if remain == 0:
                 return 1
             ans = 0
