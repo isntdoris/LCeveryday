@@ -3,7 +3,7 @@ SELECT visited_on,
 (SELECT SUM(amount)
 FROM Customer
 WHERE visited_on BETWEEN DATE_SUB(c.visited_on, INTERVAL 6 DAY) AND c.visited_on) AS amount,
-
+# RICKY HERE: 重點是條件範圍為subquery後的c.visited_on, 否則會全部加起來
 (SELECT ROUND(SUM(amount) / 7, 2)
 FROM Customer
 WHERE visited_on BETWEEN DATE_SUB(c.visited_on, INTERVAL 6 DAY) AND c.visited_on) AS average_amount
