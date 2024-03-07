@@ -5,8 +5,8 @@ class Solution:
         res = score = 0
         l, r = 0, len(tokens) - 1
 
-        while l <= r: # RICKY HERE
-            if power >= tokens[l]:
+        while l <= r: # RICKY HERE: <=
+            if power >= tokens[l]: # RICKY HERE: >=
                 power -= tokens[l]
                 score += 1
                 l += 1
