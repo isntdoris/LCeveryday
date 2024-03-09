@@ -1,5 +1,8 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
+        # time: O(n)
+        # space: O(n)
+        # edge case: [-2,-1,1,2]
         stack = []
 
         for a in asteroids:
