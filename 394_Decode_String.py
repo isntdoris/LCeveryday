@@ -1,7 +1,7 @@
 class Solution:
     def decodeString(self, s: str) -> str:
-        # time: O(n * k)
-        # space: O(n)
+        # time: O(n * k)?
+        # space: O(n)?
         # s = "3[a2[c]d2[b]]"
         stack = []
 
