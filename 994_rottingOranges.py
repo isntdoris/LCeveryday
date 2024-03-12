@@ -12,7 +12,7 @@ class Solution:
                     q.append([r, c])
         
         directions = [[1,0], [-1,0], [0,1], [0,-1]]
-        while q and fresh > 0:
+        while q and fresh > 0: # RICKY HERE: fresh > 0
             for i in range(len(q)):
                 r, c = q.popleft()
                 for dr, dc in directions:
