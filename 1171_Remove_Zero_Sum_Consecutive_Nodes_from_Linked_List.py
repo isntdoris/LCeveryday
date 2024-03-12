@@ -5,6 +5,8 @@
 #         self.next = next
 class Solution:
     def removeZeroSumSublists(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # T: O(n^2)
+        # S: O(1)
         dummy = ListNode(0, head)
         left = dummy
 
