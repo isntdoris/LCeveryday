@@ -35,6 +35,7 @@ class Solution:
 
         return leaves  # These are the centroids/minimum height tree roots
 
+# Time Limit Exceeded: this solution is not efficient, whose time complexity would be O(N^2) where N is the number of nodes in the tree
 # class Solution:
 #     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
 #         if n == 1:
