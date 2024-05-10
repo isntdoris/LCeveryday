@@ -1,3 +1,6 @@
+# Input: arr = [1,2,3,5], k = 3
+# Output: [2,5]
+
 class Solution:
     def kthSmallestPrimeFraction(self, arr: List[int], k: int) -> List[int]:
         fra = []
